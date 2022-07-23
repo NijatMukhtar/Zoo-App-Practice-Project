@@ -9,23 +9,31 @@
 /* Begin PBXBuildFile section */
 		353A3F7F288C12F2002ACF51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353A3F7E288C12F2002ACF51 /* AppDelegate.swift */; };
 		353A3F81288C12F2002ACF51 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353A3F80288C12F2002ACF51 /* SceneDelegate.swift */; };
-		353A3F83288C12F2002ACF51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353A3F82288C12F2002ACF51 /* ViewController.swift */; };
+		353A3F83288C12F2002ACF51 /* ZooparkListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353A3F82288C12F2002ACF51 /* ZooparkListController.swift */; };
 		353A3F86288C12F2002ACF51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 353A3F84288C12F2002ACF51 /* Main.storyboard */; };
 		353A3F89288C12F2002ACF51 /* Zoo_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 353A3F87288C12F2002ACF51 /* Zoo_App.xcdatamodeld */; };
 		353A3F8B288C12F2002ACF51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 353A3F8A288C12F2002ACF51 /* Assets.xcassets */; };
 		353A3F8E288C12F2002ACF51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 353A3F8C288C12F2002ACF51 /* LaunchScreen.storyboard */; };
+		35A88B34288C1CC200D4B48A /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = 35A88B33288C1CC200D4B48A /* Data.json */; };
+		35A88B36288C1CE400D4B48A /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A88B35288C1CE400D4B48A /* Models.swift */; };
+		35C79736288C17F6009E3E40 /* ButtonButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C79734288C17F5009E3E40 /* ButtonButtonCell.swift */; };
+		35C79737288C17F6009E3E40 /* ButtonButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35C79735288C17F5009E3E40 /* ButtonButtonCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		353A3F7B288C12F2002ACF51 /* Zoo App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zoo App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		353A3F7E288C12F2002ACF51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		353A3F80288C12F2002ACF51 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		353A3F82288C12F2002ACF51 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		353A3F82288C12F2002ACF51 /* ZooparkListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooparkListController.swift; sourceTree = "<group>"; };
 		353A3F85288C12F2002ACF51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		353A3F88288C12F2002ACF51 /* Zoo_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Zoo_App.xcdatamodel; sourceTree = "<group>"; };
 		353A3F8A288C12F2002ACF51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		353A3F8D288C12F2002ACF51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		353A3F8F288C12F2002ACF51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35A88B33288C1CC200D4B48A /* Data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Data.json; sourceTree = "<group>"; };
+		35A88B35288C1CE400D4B48A /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		35C79734288C17F5009E3E40 /* ButtonButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonButtonCell.swift; sourceTree = "<group>"; };
+		35C79735288C17F5009E3E40 /* ButtonButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonButtonCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,14 +68,42 @@
 			children = (
 				353A3F7E288C12F2002ACF51 /* AppDelegate.swift */,
 				353A3F80288C12F2002ACF51 /* SceneDelegate.swift */,
-				353A3F82288C12F2002ACF51 /* ViewController.swift */,
+				353A3F95288C16ED002ACF51 /* Controllers */,
+				35C79738288C1801009E3E40 /* Cells */,
 				353A3F84288C12F2002ACF51 /* Main.storyboard */,
 				353A3F8A288C12F2002ACF51 /* Assets.xcassets */,
 				353A3F8C288C12F2002ACF51 /* LaunchScreen.storyboard */,
 				353A3F8F288C12F2002ACF51 /* Info.plist */,
 				353A3F87288C12F2002ACF51 /* Zoo_App.xcdatamodeld */,
+				35A88B33288C1CC200D4B48A /* Data.json */,
+				35A88B37288C1CF100D4B48A /* Models */,
 			);
 			path = "Zoo App";
+			sourceTree = "<group>";
+		};
+		353A3F95288C16ED002ACF51 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				353A3F82288C12F2002ACF51 /* ZooparkListController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		35A88B37288C1CF100D4B48A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				35A88B35288C1CE400D4B48A /* Models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		35C79738288C1801009E3E40 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				35C79734288C17F5009E3E40 /* ButtonButtonCell.swift */,
+				35C79735288C17F5009E3E40 /* ButtonButtonCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,7 +164,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35A88B34288C1CC200D4B48A /* Data.json in Resources */,
 				353A3F8E288C12F2002ACF51 /* LaunchScreen.storyboard in Resources */,
+				35C79737288C17F6009E3E40 /* ButtonButtonCell.xib in Resources */,
 				353A3F8B288C12F2002ACF51 /* Assets.xcassets in Resources */,
 				353A3F86288C12F2002ACF51 /* Main.storyboard in Resources */,
 			);
@@ -142,8 +180,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				353A3F89288C12F2002ACF51 /* Zoo_App.xcdatamodeld in Sources */,
-				353A3F83288C12F2002ACF51 /* ViewController.swift in Sources */,
+				353A3F83288C12F2002ACF51 /* ZooparkListController.swift in Sources */,
 				353A3F7F288C12F2002ACF51 /* AppDelegate.swift in Sources */,
+				35A88B36288C1CE400D4B48A /* Models.swift in Sources */,
+				35C79736288C17F6009E3E40 /* ButtonButtonCell.swift in Sources */,
 				353A3F81288C12F2002ACF51 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
