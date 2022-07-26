@@ -24,4 +24,6 @@ struct Animal: Codable {
     var image: String
     var id: Int
 }
+
+
  

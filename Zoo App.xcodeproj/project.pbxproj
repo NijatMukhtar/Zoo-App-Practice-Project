@@ -14,10 +14,10 @@
 		353A3F89288C12F2002ACF51 /* Zoo_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 353A3F87288C12F2002ACF51 /* Zoo_App.xcdatamodeld */; };
 		353A3F8B288C12F2002ACF51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 353A3F8A288C12F2002ACF51 /* Assets.xcassets */; };
 		353A3F8E288C12F2002ACF51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 353A3F8C288C12F2002ACF51 /* LaunchScreen.storyboard */; };
+		355CC0552890448900E3EF0B /* ButtonImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355CC0532890448900E3EF0B /* ButtonImageButton.swift */; };
+		355CC0562890448900E3EF0B /* ButtonImageButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 355CC0542890448900E3EF0B /* ButtonImageButton.xib */; };
 		35A88B34288C1CC200D4B48A /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = 35A88B33288C1CC200D4B48A /* Data.json */; };
 		35A88B36288C1CE400D4B48A /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A88B35288C1CE400D4B48A /* Models.swift */; };
-		35C79736288C17F6009E3E40 /* ButtonButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C79734288C17F5009E3E40 /* ButtonButtonCell.swift */; };
-		35C79737288C17F6009E3E40 /* ButtonButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35C79735288C17F5009E3E40 /* ButtonButtonCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,10 +30,10 @@
 		353A3F8A288C12F2002ACF51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		353A3F8D288C12F2002ACF51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		353A3F8F288C12F2002ACF51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		355CC0532890448900E3EF0B /* ButtonImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonImageButton.swift; sourceTree = "<group>"; };
+		355CC0542890448900E3EF0B /* ButtonImageButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonImageButton.xib; sourceTree = "<group>"; };
 		35A88B33288C1CC200D4B48A /* Data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Data.json; sourceTree = "<group>"; };
 		35A88B35288C1CE400D4B48A /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
-		35C79734288C17F5009E3E40 /* ButtonButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonButtonCell.swift; sourceTree = "<group>"; };
-		35C79735288C17F5009E3E40 /* ButtonButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonButtonCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +100,8 @@
 		35C79738288C1801009E3E40 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				35C79734288C17F5009E3E40 /* ButtonButtonCell.swift */,
-				35C79735288C17F5009E3E40 /* ButtonButtonCell.xib */,
+				355CC0532890448900E3EF0B /* ButtonImageButton.swift */,
+				355CC0542890448900E3EF0B /* ButtonImageButton.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -164,9 +164,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				355CC0562890448900E3EF0B /* ButtonImageButton.xib in Resources */,
 				35A88B34288C1CC200D4B48A /* Data.json in Resources */,
 				353A3F8E288C12F2002ACF51 /* LaunchScreen.storyboard in Resources */,
-				35C79737288C17F6009E3E40 /* ButtonButtonCell.xib in Resources */,
 				353A3F8B288C12F2002ACF51 /* Assets.xcassets in Resources */,
 				353A3F86288C12F2002ACF51 /* Main.storyboard in Resources */,
 			);
@@ -180,10 +180,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				353A3F89288C12F2002ACF51 /* Zoo_App.xcdatamodeld in Sources */,
+				355CC0552890448900E3EF0B /* ButtonImageButton.swift in Sources */,
 				353A3F83288C12F2002ACF51 /* ZooparkListController.swift in Sources */,
 				353A3F7F288C12F2002ACF51 /* AppDelegate.swift in Sources */,
 				35A88B36288C1CE400D4B48A /* Models.swift in Sources */,
-				35C79736288C17F6009E3E40 /* ButtonButtonCell.swift in Sources */,
 				353A3F81288C12F2002ACF51 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

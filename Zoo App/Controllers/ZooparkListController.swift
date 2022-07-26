@@ -6,17 +6,19 @@
 //
 
 import UIKit
+import MapKit
 
-class ZooparkListController: UIViewController, UITableViewDataSource, UITableViewDelegate{
-    @IBOutlet weak var table: UITableView!
+class ZooparkListController: UIViewController {
+    
     @IBOutlet weak var segment: UISegmentedControl!
+    @IBOutlet weak var map: MKMapView!
+    @IBOutlet weak var collection: UICollectionView!
     
     var zoos = [Zoopark]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        table.register(UINib(nibName: "ButtonButtonCell", bundle: nil), forCellReuseIdentifier: "ButtonButtonCell")
+        collection.register(ButtonImageButton.self, forCellWithReuseIdentifier: "ButtonImageButton")
     }
 
     func getDocumentsDirectoryUrl() -> URL {
@@ -37,17 +39,37 @@ class ZooparkListController: UIViewController, UITableViewDataSource, UITableVie
         }
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = table.dequeueReusableCell(withIdentifier: "ButtonButtonCell", for: indexPath) as! ButtonButtonCell
-        
-        return cell
+
+    @IBAction func segmentTapped(_ sender: Any) {
+        switch segment.selectedSegmentIndex{
+        case 0:
+            collection.isHidden = false
+            map.isHidden = true
+        case 1:
+            collection.isHidden = false
+            map.isHidden = true
+        case 2:
+            collection.isHidden = true
+            map.isHidden = false
+        default:
+            break;
+        }
     }
     
 }
 
+extension ZooparkListController: UICollectionViewDelegate, UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collection.dequeueReusableCell(withReuseIdentifier: "ButtonImageButton", for: indexPath) as! ButtonImageButton
+        
+        return cell
+    }
+    
 
+    
+}
  

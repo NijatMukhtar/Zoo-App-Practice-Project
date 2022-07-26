@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21179.7" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21179.7" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yZg-yg-eCB">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21169.4"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,43 +18,75 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vcI-gf-VEI">
-                                <rect key="frame" x="8" y="44" width="374" height="32"/>
+                                <rect key="frame" x="8" y="88" width="374" height="32"/>
                                 <segments>
                                     <segment title="Table"/>
                                     <segment title="Grid"/>
                                     <segment title="Map"/>
                                 </segments>
-                            </segmentedControl>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Nuc-jo-Uv1">
-                                <rect key="frame" x="0.0" y="83" width="390" height="727"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="6t0-AT-bi3" id="Nfa-Tl-1co"/>
-                                    <outlet property="delegate" destination="6t0-AT-bi3" id="bN7-N8-CKR"/>
+                                    <action selector="segmentTapped:" destination="6t0-AT-bi3" eventType="valueChanged" id="QL3-89-5m5"/>
                                 </connections>
-                            </tableView>
+                            </segmentedControl>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="PJF-D9-TSV">
+                                <rect key="frame" x="0.0" y="127" width="390" height="683"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YDm-9c-QQm">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="6t0-AT-bi3" id="Bts-VV-U1a"/>
+                                    <outlet property="delegate" destination="6t0-AT-bi3" id="OUQ-w0-Tpg"/>
+                                </connections>
+                            </collectionView>
+                            <mapView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="2Uk-fu-yM4">
+                                <rect key="frame" x="0.0" y="127" width="390" height="683"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ile-yQ-JnU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Ile-yQ-JnU" firstAttribute="trailing" secondItem="vcI-gf-VEI" secondAttribute="trailing" constant="8" id="2YD-ZD-Fi4"/>
-                            <constraint firstItem="Nuc-jo-Uv1" firstAttribute="top" secondItem="vcI-gf-VEI" secondAttribute="bottom" constant="8" id="33O-O3-iHs"/>
-                            <constraint firstItem="Ile-yQ-JnU" firstAttribute="trailing" secondItem="Nuc-jo-Uv1" secondAttribute="trailing" id="7rl-ZM-LK9"/>
-                            <constraint firstItem="Ile-yQ-JnU" firstAttribute="bottom" secondItem="Nuc-jo-Uv1" secondAttribute="bottom" id="Oyd-5h-F0j"/>
-                            <constraint firstItem="Nuc-jo-Uv1" firstAttribute="leading" secondItem="Ile-yQ-JnU" secondAttribute="leading" id="Qaf-OO-uq8"/>
                             <constraint firstItem="vcI-gf-VEI" firstAttribute="top" secondItem="Ile-yQ-JnU" secondAttribute="top" id="fLx-g5-4Fr"/>
+                            <constraint firstItem="PJF-D9-TSV" firstAttribute="top" secondItem="vcI-gf-VEI" secondAttribute="bottom" constant="8" symbolic="YES" id="hoC-qm-Pbm"/>
                             <constraint firstItem="vcI-gf-VEI" firstAttribute="leading" secondItem="Ile-yQ-JnU" secondAttribute="leading" constant="8" id="mp8-73-M2o"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Zooparks" id="mjr-Pt-1Sk"/>
                     <connections>
+                        <outlet property="collection" destination="PJF-D9-TSV" id="8sS-eB-9Ci"/>
+                        <outlet property="map" destination="2Uk-fu-yM4" id="xLO-Y3-nqm"/>
                         <outlet property="segment" destination="vcI-gf-VEI" id="ll9-eL-CH8"/>
-                        <outlet property="table" destination="Nuc-jo-Uv1" id="KWC-29-xDM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c0V-cx-7U2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="900" y="17.772511848341232"/>
+            <point key="canvasLocation" x="2758.4615384615386" y="17.772511848341232"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8jP-8n-YJN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yZg-yg-eCB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="at4-MC-xlC">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6t0-AT-bi3" kind="relationship" relationship="rootViewController" id="ar2-80-OrM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gay-kI-hjk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1932" y="18"/>
         </scene>
     </scenes>
     <resources>
